@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "8bd38073-7718-4c75-9356-0e1f98e1902f",
+		"name": "saham_rakyat_test",
+		"description": "Collections containing API fo user, order item and order history each of them has endpoints (save, get list, get detail, update and delete) basic CRUD operations. A Collection variable (url) was set to be used as url endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17552477"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "Jika Dia",
+									"description": "required, string",
+									"type": "text"
+								},
+								{
+									"key": "first_order",
+									"value": "Bersama",
+									"description": "required, string",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}users",
+							"host": [
+								"{{url}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "nama baru masuk lagi3",
+									"description": "required,string",
+									"type": "text"
+								},
+								{
+									"key": "first_order",
+									"value": "nos3",
+									"description": "required,string",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}users/2",
+							"host": [
+								"{{url}}users"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}users/4",
+							"host": [
+								"{{url}}users"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}users/2",
+							"host": [
+								"{{url}}users"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}users?page=1&page_size=10",
+							"host": [
+								"{{url}}users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "update, delete and detail endpoint is folowed by ID as an identifier"
+		},
+		{
+			"name": "order item",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Item name bakal hapus",
+									"description": "required,string",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "200000",
+									"description": "required,int",
+									"type": "text"
+								},
+								{
+									"key": "expired_at",
+									"value": "2026-01-02T15:04:05Z",
+									"description": "erquired,timestamp",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}items",
+							"host": [
+								"{{url}}items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kita ganti namanya",
+									"description": "required,string",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "500000",
+									"description": "required,int",
+									"type": "text"
+								},
+								{
+									"key": "expired_at",
+									"value": "2026-01-02T15:04:05Z",
+									"description": "required,timestamp",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}items/2",
+							"host": [
+								"{{url}}items"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}items/3",
+							"host": [
+								"{{url}}items"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}items/1",
+							"host": [
+								"{{url}}items"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}items?page=1&page_size=10",
+							"host": [
+								"{{url}}items"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "update, delete and detail endpoint is folowed by ID as an identifier"
+		},
+		{
+			"name": "order history",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "descriptions",
+									"value": "Penjelasan mengenai mengapa saya membeli beda",
+									"description": "required,text",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"description": "required,numeric",
+									"type": "text"
+								},
+								{
+									"key": "item_id",
+									"value": "1",
+									"description": "required,numeric",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}history",
+							"host": [
+								"{{url}}history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "descriptions",
+									"value": "akhirnya diganti lagi",
+									"description": "required,string",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"description": "required,numeric",
+									"type": "text"
+								},
+								{
+									"key": "item_id",
+									"value": "7",
+									"description": "required,numeric",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}history/1",
+							"host": [
+								"{{url}}history"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}history/3",
+							"host": [
+								"{{url}}history"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}history/1",
+							"host": [
+								"{{url}}history"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}history?page=1&page_size=10",
+							"host": [
+								"{{url}}history"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "update, delete and detail endpoint is folowed by ID as an identifier"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:1323/",
+			"type": "string"
+		}
+	]
+}
